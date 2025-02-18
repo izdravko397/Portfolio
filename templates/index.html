@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Твоите стилове -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animation-style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+        <img src="{% static 'media/DSC09820.jpg' %}" alt="">
+
+        <div>
+            <h1>Hi</h1>
+            <p class="typewrite" data-period="2000" data-type='["My name is Zdravko.","I am a Software Developer.","I graduated in Software Engineering with Python."]'>
+              <span class="wrap"></span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-text">
+            <p>
+                Motivated and ambitious computer
+                science student who has almost
+                completed a Python Software
+                Engineering track at SoftUni. I am
+                looking for opportunities to gain
+                practical experience in the IT field. I am
+                a quick learner, analytical thinker and
+                passionate about software
+                development.
+            </p>
+            <span class="download-cv">
+                <a href="{% static 'media/My CV.pdf' %}" download="Zdravko-Ivanov-CV">Download CV</a>
+            </span>
+        </div>
+
+        <div class='animation-example'>
+            <div class='item'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item -type2'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item -type2'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item -type2'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='item -type2'>
+                <div class='line'></div>
+                <div class='dot'></div>
+                <div class='circle'></div>
+            </div>
+            <div class='center'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates">
+        <div class="slider-container" id="slider-container">
+            <div class="slider-wrapper" id="slider-wrapper">
+              <div class="slide">
+                <img src="{% static 'media/Programming Basics - February 2023 - Certificate.png' %}" alt="Certificate 1" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/Programming Fundamentals with Python - May 2023 - Certificate.jpg' %}" alt="Certificate 2" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/Python Advanced - September 2023 - Certificate.jpg' %}" alt="Certificate 3" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/Python OOP - October 2023 - Certificate.jpg' %}" alt="Certificate 4" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/PostgreSQL - May 2024 - Certificate .jpeg' %}" alt="Certificate 4" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/Python ORM - June 2024 - Certificate .jpeg' %}" alt="Certificate 4" />
+              </div>
+              <div class="slide">
+                <img src="{% static 'media/Django Advanced - October 2024 - Certificate .jpeg' %}" alt="Certificate 4" />
+              </div>
+            </div>
+        </div>
+        
+        <div class="dots-container" id="dots-container"></div>
+    </section>
+
+    <section id="contacts">
+
+        <ul>
+            <li>
+              <a class="facebook" onclick="window.open('https://www.facebook.com/profile.php?id=100007038735350','mywindow');">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" onclick="window.open('https://github.com/izdravko397','mywindow');">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="instagram" onclick="window.open('https://www.instagram.com/z.ivanov30/','mywindow');">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="google" href="#" onclick="copyEmail(event)">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+        </ul>
+
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

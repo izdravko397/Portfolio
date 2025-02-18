@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Фиксирано навигационно меню */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Над другите елементи */
+  }
+  
+  /* Стилове за самото меню */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    background-color: #000; /* Черен фон */
+  }
+  
+  /* Стилове за линковете */
+  nav ul li a {
+    color: #fff;             /* Бял текст */
+    text-decoration: none;
+    font-size: large;
+    transition: color 0.3s ease;
+  }
+  
+  /* Оцветяване на активния и/или при задържане */
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #ffcc00; /* Пример: жълт цвят за активен/hover ефект */
+  }
+  
+section {
+    padding-top: 20px;
+}  
+
+#home {
+    position: relative;
+    height: 100vh;
+    background-color: #f5f5f5;
+    color: rgb(45, 59, 63);
+}
+
+#home img {
+    position: absolute;
+    top:50%;
+    left: 30%;
+    transform:translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#home h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+#home div{
+    position: absolute;
+    top:50%;
+    left: 70%;
+    transform:translate(-50%,-50%);
+    width: 400px;
+}
+
+#home .typewrite > .wrap { 
+    border-right: 0.08em solid #000; /* Може да промениш цвета по желание */
+  }
+
+#about {
+    position: relative;
+    height: 100vh;
+    background-color: rgb(153, 255, 255);
+    color: rgb(45, 59, 63);
+}
+
+.about-text {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+}
+
+.download-cv a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-cv a:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.download-cv a:active {
+    transform: scale(0.98);
+}
+
+#certificates {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    height: 100vh;
+    background-color: rgb(207, 31, 31);
+}
+
+/* ------------------ СТИЛОВЕ ЗА СЛАЙДЪРА ------------------ */
+.slider-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;  /* Скрива излишната част при преместване */
+    position: relative;
+    background-color: rgb(207, 31, 31);
+    margin: 0 auto; 
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    /* width: 100%; */
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Точките за навигация (преименувани на .slider-dot) */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-dot.active {
+    background-color: #555;
+}
+
+
+#contacts {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(252, 255, 61);
+}
+
+#contacts ul {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    display:flex;
+  }
+  #contacts ul li {
+    list-style:none;
+  }
+  #contacts ul li a {
+    display:block;
+    position:relative;
+    width:100px;
+    height:100px;
+    line-height:100px;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#404040;
+    margin: 0 30px;
+    transition:.5s;
+  }
+  #contacts ul li a span {
+    position:absolute;
+    transition: transform .5s;
+  }
+  #contacts ul li a span:nth-child(1),
+  #contacts ul li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:#404040;
+  }
+  #contacts ul li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+  }
+  #contacts ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+  }
+  
+  #contacts ul li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+  }
+  #contacts ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+  }
+  
+  #contacts ul li a span:nth-child(2),
+  #contacts ul li a span:nth-child(4){
+    width:3px;
+    height:100%;
+    background:#404040;
+  }
+  #contacts ul li a span:nth-child(2) {
+    top:0;
+    left:0;
+    transform:scale(0);
+    transform-origin: bottom;
+  }
+  #contacts ul li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+  }
+  #contacts ul li a span:nth-child(4) {
+    top:0;
+    right:0;
+    transform:scale(0);
+    transform-origin: top;
+  }
+  #contacts ul li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+  }
+  
+  #contacts .facebook:hover {
+    color: #3b5998;
+  }
+  #contacts .facebook:hover span { 
+    background: #3b5998;
+  }
+  #contacts .twitter:hover {
+    color: #1da1f2;
+  }
+  #contacts .twitter:hover span { 
+    background: #1da1f2;
+  }
+  #contacts .instagram:hover {
+    color: #c32aa3;
+  }
+  #contacts .instagram:hover span { 
+    background: #c32aa3;
+  }
+  #contacts .google:hover {
+    color: #dd4b39;
+  }
+  #contacts .google:hover span { 
+    background: #dd4b39;
+  }
+  #contacts ul li a .twitter {
+    color: #1da1f2;
+  }
+  #contacts ul li a:hover:nth-child(3) {
+    color: #c32aa3;
+  }
+  #contacts ul li a:hover:nth-child(4) {
+    color: #dd4b39;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav ul{
+      font-size: 20px;
+      padding: 5px 0px;
+      gap: 10px;
+    }
+
+    #home {
+      position: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #home img {
+        width: 200px;
+        height: 200px;
+        position: none;
+    }
+
+    #home div {
+        position: none;
+        width: 200px;
+    }
+
+    #contacts ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #about{
+      /* position: relative; */
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center;
+      align-items: center; */
+    }
+
+    #about .about-text {
+      /* position: absolute;
+      top: 10%;
+      left: 50%;
+      width: 300px;
+      transform: translate(-50%, -50%); */
+      width: 300px;
+
+    }
+
+    #about .animation-example{
+      /* position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translate(-50%, -50%); */
+      width: 200px;
+      height: 200px;
+    }
+
+  }
