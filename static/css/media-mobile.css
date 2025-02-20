@@ -1,0 +1,141 @@
+@media screen and (max-width: 768px) {
+    nav ul{
+      font-size: 20px;
+      padding: 5px 0px;
+      gap: 10px;
+    }
+
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 50px;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      padding: 40px 20px;
+    }
+
+  #home img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      position: static;
+      transform: none;
+  }
+
+  #home div {
+      width: 100%;
+      max-width: 300px;
+      position: static;
+      transform: none;
+  }
+
+  #home h1 {
+      font-size: 40px;
+  }
+
+  #home .typewrite {
+      font-size: 18px;
+  }
+
+  #contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Контейнерът на about */
+  #about {
+    position: relative !important;
+    display: flex !important;
+    gap: 100px;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+    padding: 40px 20px !important;
+  }
+
+  /* Текстовият блок да е отгоре */
+  #about .about-text {
+    order: 1;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: static !important;
+    transform: none !important;
+  }
+
+  /* Анимацията да е отдолу и с по-малки размери */
+  #about .animation-example {
+    order: 2;
+    position: relative !important;   /* Премахваме абсолютно позициониране */
+    top: auto !important;         /* Нулираме предишните стойности */
+    left: auto !important;
+    transform: none !important;   /* Премахваме всички трансформации */
+    width: 200px !important;      /* Задай според нуждите ти */
+    height: 200px !important;     /* Задай според нуждите ти */
+    margin-top: 20px !important;
+  }
+
+    /* Основният контейнер за сертификатите */
+    #certificates {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Можеш да ползваш center, ако предпочиташ */
+      align-items: center;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      min-height: 100vh; /* Да заема цялата височина на екрана, ако искаш */
+      background-color: rgb(207, 31, 31); /* Оставяме цвета */
+    }
+  
+  /* Контейнерът на слайдъра */
+  .slider-container {
+    width: 90%;           /* Малко по-малка ширина, за да не е твърде голям */
+    height: 60vh;         /* Намаляваме височината на слайдъра */
+    max-height: 500px;    /* Опционално - лимитирай максималната височина */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(207, 31, 31); 
+  }
+
+  /* Wrapper-ът на слайдовете */
+  .slider-wrapper {
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    align-items: center; 
+  }
+
+  /* Всеки слайд */
+  .slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slide img {
+    width: auto;         /* Автоматична ширина, за да не се деформира */
+    max-height: 90%;     /* Да не надскача 90% от височината на контейнера */
+    object-fit: contain; /* Да се запази съотношението на сертификата */
+    border-radius: 8px;
+    display: block;
+  }
+
+  /* Точките */
+  .dots-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+}
