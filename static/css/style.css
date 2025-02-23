@@ -194,6 +194,39 @@ section {
     background-color: #555;
 }
 
+#projects {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 179, 71);
+}
+
+.project-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 200px;
+  padding: 20px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.project-container:hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 182, 81, 0.699);;
+}
+
+.project-container img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
 #contacts {
     position: relative;

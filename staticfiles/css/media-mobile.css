@@ -1,8 +1,12 @@
 @media screen and (max-width: 768px) {
     nav ul{
-      font-size: 20px;
-      padding: 5px 0px;
+      padding: 10px 0px;
       gap: 10px;
+      text-align: center;
+    }
+
+    nav ul li a{
+      font-size: 16px;
     }
 
     #home {
@@ -94,7 +98,7 @@
       min-height: 100vh; /* Да заема цялата височина на екрана, ако искаш */
       background-color: rgb(207, 31, 31); /* Оставяме цвета */
     }
-  
+
   /* Контейнерът на слайдъра */
   .slider-container {
     width: 90%;           /* Малко по-малка ширина, за да не е твърде голям */
@@ -103,7 +107,7 @@
     overflow: hidden;
     position: relative;
     margin: 0 auto;
-    background-color: rgb(207, 31, 31); 
+    background-color: rgb(207, 31, 31);
   }
 
   /* Wrapper-ът на слайдовете */
@@ -111,7 +115,7 @@
     height: 100%;
     transition: transform 0.5s ease-in-out;
     display: flex;
-    align-items: center; 
+    align-items: center;
   }
 
   /* Всеки слайд */
@@ -138,4 +142,14 @@
     justify-content: center;
   }
 
+  #projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 90px;
+  }
+
+  .project-container {
+    width: 150px;
+  }
 }
